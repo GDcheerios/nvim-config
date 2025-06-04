@@ -16,6 +16,8 @@ require("lazy").setup({
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
   -- LSP and Autocompletion
+  { "williamboman/mason.nvim", build = ":MasonUpdate", opts = {} },
+  { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
   { "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-nvim-lsp" },
@@ -24,5 +26,6 @@ require("lazy").setup({
   -- Quality of life
   { "numToStr/Comment.nvim", opts = {}, lazy = false },
   { "folke/which-key.nvim", opts = {} },
+  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false} -- todo highlighting
 })
 

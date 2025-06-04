@@ -4,6 +4,12 @@ local builtin = require('telescope.builtin')
 vim.g.mapleader = '\\'
 vim.g.maplocalleader = '\\'
 
+-- lazy
+vim.keymap.set('n', '<leader>l', '<cmd>Lazy<CR>', { desc = '[L]azy Plugin Manager' })
+
+-- mason
+vim.keymap.set('n', '<leader>m', '<cmd>Mason<CR>', { desc = '[M]ason LSP Manager' })
+
 -- telescope
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep,  { desc = '[S]earch by [G]rep' })
