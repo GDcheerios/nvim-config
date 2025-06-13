@@ -1,4 +1,3 @@
--- lua/config/lazy.lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -26,6 +25,14 @@ require("lazy").setup({
   -- Quality of life
   { "numToStr/Comment.nvim", opts = {}, lazy = false },
   { "folke/which-key.nvim", opts = {} },
-  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false} -- todo highlighting
+  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false }
+})
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "VeryLazy",
+  callback = function()
+    vim.opt.termguicolors = true
+    vim.cmd("colorscheme GDcheeriosTheme")
+  end,
 })
 
