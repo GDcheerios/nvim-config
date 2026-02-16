@@ -1,11 +1,13 @@
--- load configs
-require("config.lazy")
-require("config.keymaps")
-require("config.lsp")
-
 -- settings
 vim.cmd([[syntax on]])
 vim.cmd([[filetype plugin indent on]])
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.foldmethod = "marker"
+vim.opt.foldmarker = "# region,# endregion"
+vim.opt.foldlevel = 99
 
 -- colorscheme
 vim.opt.termguicolors = true
@@ -15,3 +17,7 @@ vim.api.nvim_create_autocmd("User", {
     vim.cmd("colorscheme GDcheeriosTheme")
   end,
 })
+
+-- load configs
+require("config.lazy")
+require("config.keymaps")
