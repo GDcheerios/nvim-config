@@ -44,5 +44,8 @@ require("lazy").setup({
   -- Quality of life
   { "numToStr/Comment.nvim", opts = {}, lazy = false },
   { "folke/which-key.nvim", opts = {} },
-  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false }
+  { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false },
+
+  -- extras
+  {'vyfor/cord.nvim'}
 })
