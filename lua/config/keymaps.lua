@@ -43,6 +43,7 @@ local function safe_on_attach(client, bufnr)
   vim.keymap.set('n', '<leader>d[', function() vim.diagnostic.goto_prev() end, vim.tbl_extend('force', bufopts, { desc = "Go to previous diagnostic" }))
   vim.keymap.set('n', '<leader>d]', function() vim.diagnostic.goto_next() end, vim.tbl_extend('force', bufopts, { desc = "Go to next diagnostic" }))
   vim.keymap.set('n', '<leader>d<space>', function() vim.diagnostic.setloclist() end, vim.tbl_extend('force', bufopts, { desc = "Open location list with diagnostics" }))
+  vim.keymap.set('n', '<leader>dq', function() vim.diagnostic.open_float() end, vim.tbl_extend('force', bufopts, { desc = "View error" }))
 end
 
 -- telescope

@@ -30,7 +30,6 @@ require("lazy").setup({
         automatic_installation = true,
       })
 
-      -- Configure every installed server using the NEW API
       for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
         vim.lsp.config(server, {})
         vim.lsp.enable(server)
@@ -46,6 +45,10 @@ require("lazy").setup({
   { "folke/which-key.nvim", opts = {} },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false },
   { 'nvim-mini/mini.nvim', version = '*', config = function() require('mini.surround').setup() end },
+  { "folke/noice.nvim" },
+  { "akinsho/bufferline.nvim" },
+  { "lukas-reineke/indent-blankline.nvim" },
+
 
   -- extras
   {'vyfor/cord.nvim'}
