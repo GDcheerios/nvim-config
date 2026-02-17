@@ -45,6 +45,7 @@ require("lazy").setup({
   { "numToStr/Comment.nvim", opts = {}, lazy = false },
   { "folke/which-key.nvim", opts = {} },
   { "folke/todo-comments.nvim", dependencies = { "nvim-lua/plenary.nvim" }, opts = {}, lazy = false },
+  { 'nvim-mini/mini.nvim', version = '*', config = function() require('mini.surround').setup() end },
 
   -- extras
   {'vyfor/cord.nvim'}
