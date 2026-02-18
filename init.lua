@@ -16,12 +16,6 @@ vim.opt.softtabstop = 4
 
 -- colorscheme
 vim.opt.termguicolors = true
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy", -- LazyNvim hook
-  callback = function()
-    vim.cmd("colorscheme GDcheeriosTheme")
-  end,
-})
 
 -- load configs
 require("config.lazy")
