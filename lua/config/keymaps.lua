@@ -51,8 +51,8 @@ vim.keymap.set('n', '<leader>sb', builtin.buffers,    { desc = '[S]earch [B]uffe
 vim.keymap.set('n', '<leader>sh', builtin.help_tags,  { desc = '[S]earch [H]elp' })
 
 -- line comment toggle
-vim.keymap.set('n', '<C-_>', '<Plug>(comment_toggle_linewise_current)', { silent = true })
-vim.keymap.set('v', '<C-_>', '<Plug>(comment_toggle_linewise_visual)', { silent = true })
+vim.keymap.set('n', '<leader>/', '<Plug>(comment_toggle_linewise_current)', { silent = true })
+vim.keymap.set('v', '<leader>/', '<Plug>(comment_toggle_linewise_visual)', { silent = true })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp.attach', { clear = true }),
