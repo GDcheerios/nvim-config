@@ -35,9 +35,7 @@ local function safe_on_attach(client, bufnr)
   vim.keymap.set('n', '<leader>rf', function() vim.lsp.buf.format { async = true } end, vim.tbl_extend('force', bufopts, { desc = "[R]efactor [F]ormat" }))
 
   -- Code action (guard if needed)
-  if client.server_capabilities.codeActionProvider then
-    vim.keymap.set('n', '<leader><space>', function() vim.lsp.buf.code_action() end, vim.tbl_extend('force', bufopts, { desc = "Code Action" }))
-  end
+  vim.keymap.set('n', '<leader><space>', function() vim.lsp.buf.code_action() end, vim.tbl_extend('force', bufopts, { desc = "Code Action" }))
 
   -- Diagnostics
   vim.keymap.set('n', '<leader>d[', function() vim.diagnostic.goto_prev() end, vim.tbl_extend('force', bufopts, { desc = "Go to previous diagnostic" }))
